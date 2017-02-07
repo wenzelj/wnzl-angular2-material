@@ -14,18 +14,12 @@ import {MessageService} from "./common/message.service";
 import {Config} from './common/configuration'
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import 'hammerjs';
-import {ExchangeSelect} from "./directives/exchangeSelectDirective";
-import {ShyTypeSelect} from "./directives/typeSelectDirective";
-import {ShyStatusSelect} from "./directives/statusSelectDirective";
-import {ShyOrderDepth} from "./directives/shyOrderDepth";
-import {ShyOwnOrderBasic} from "./ownorder/shyOwnOrderBasic";
-import {ShyOwnOrderDetailed} from "./ownorder/shyOwnOrderDetailed";
-import {ShyOrders} from "./ownorder/shyOrders";
+
 
 @NgModule({
     declarations: [AppComponent, Home],
     imports     : [BrowserModule, FormsModule, ReactiveFormsModule, HttpModule, RouterModule.forRoot(rootRouterConfig), MaterialModule.forRoot(), ToastModule, Ng2GoogleChartsModule],
-    providers   : [{provide: LocationStrategy, useClass: HashLocationStrategy}, AuthenticationService, Config, MessageService,  {  provide: "windowObject", useValue: window }],
+    providers   : [{provide: LocationStrategy, useClass: HashLocationStrategy},  {  provide: "windowObject", useValue: window }],
     bootstrap   : [AppComponent]
 })
 export class AppModule {

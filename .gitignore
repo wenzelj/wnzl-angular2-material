@@ -1,0 +1,10 @@
+
+/node_modules
+/app/*.js
+/app/*.js.map
+/app/*/*.js
+/app/*/*.js.map
+
+/dist/*.js
+/dist/*.map
+
